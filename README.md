@@ -6,6 +6,11 @@ This repository sets up a simple container-based web infrastructure lab using Do
 
 ---
 
+## Demo Video
+```
+https://drive.google.com/file/d/1q7stdKsk0tgfx3Ua7KmyXhVCTn2uYOuR/view?usp=sharing
+```
+
 ## 📦 Stack Overview
 
 - **web-01** – Static site container (port 8080, SSH 2211)
@@ -173,7 +178,9 @@ api-summative/
 └── README.md
 ```
 
-🧩 Frappe REST API Integration
+
+##🧩 Frappe REST API Integration
+```
 This project uses the Frappe REST API to interact with a custom Doctype named Request. This doctype handles user maintenance requests, which can be created, viewed, updated, or deleted via API calls.
 
 API Endpoints
@@ -231,6 +238,7 @@ Docker & Docker Compose — https://www.docker.com
 Containerization and orchestration of services.
 
 Open-source libraries and tools referenced throughout the project.
+```
 
 ---
 
