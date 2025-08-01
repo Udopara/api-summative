@@ -1,0 +1,56 @@
+version: '3.8'
+
+# networks:
+#   webnet:
+#     driver: bridge
+
+networks:
+  lablan:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+    
+services:
+  web-01:
+    image: puopara/request-app:v1
+    container_name: web-01
+    restart: unless-stopped
+    networks:
+      lablan:
+        ipv4_address: 172.20.0.11
+    ports:
+      - "2211:22"
+      - "8080:80"
+    # networks:
+    #   - webnet
+
+  web-02:
+    image: puopara/request-app:v1
+    container_name: web-02
+    restart: unless-stopped
+    networks:
+      lablan:
+        ipv4_address: 172.20.0.12
+    ports:
+      - "2212:22"
+      - "8081:80"
+    # networks:
+    #   - webnet
+
+  lb-01:
+    image: haproxy:alpine
+    container_name: lb-01
+    # ports:
+    #   - "80:80"
+    volumes:
+      - ./lb-01/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    networks:
+      lablan:
+        ipv4_address: 172.20.0.10
+    ports:
+      - "2210:22"
+      - "8082:80"  
+    # networks:
+    #   - webnet
+
