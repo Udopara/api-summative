@@ -10,6 +10,10 @@ This repository sets up a simple container-based web infrastructure lab using Do
 ```
 https://drive.google.com/file/d/1q7stdKsk0tgfx3Ua7KmyXhVCTn2uYOuR/view?usp=sharing
 ```
+## Project Repo
+```
+https://github.com/oparap8/requests-app
+```
 
 ## 📦 Stack Overview
 
